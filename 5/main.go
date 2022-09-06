@@ -163,9 +163,9 @@ func main() {
 	}
 
 	//3.加入
-	Insert(head, hero1)
-	Insert(head, hero2)
-	Insert(head, hero3)
+	InsertNode(head, hero1)
+	InsertNode(head, hero2)
+	InsertNode(head, hero3)
 
 	//4.显示
 	fmt.Println("插入后的链表：")
