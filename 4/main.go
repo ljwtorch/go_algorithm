@@ -54,7 +54,7 @@ func InsertNode(head *HeroNode, newNode *HeroNode) {
 	}
 }
 
-//删除结点
+// DeleteNode 删除结点
 func DeleteNode(head *HeroNode, id int) {
 	//1.创建一个辅助结点
 	temp := head
