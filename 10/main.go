@@ -8,7 +8,7 @@ func SelectSort(arr []int) []int {
 		maxNum := arr[i]
 		maxIndex := i
 		for j := i + 1; j < len(arr); j++ {
-			if maxNum < arr[j] { //从大到小
+			if maxNum < arr[j] { //从大到小，或者从小到大
 				maxNum = arr[j]
 				maxIndex = j
 			}
