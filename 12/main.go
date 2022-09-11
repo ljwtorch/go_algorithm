@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 /*
 1.left 表示数组左边的下标
@@ -8,7 +12,7 @@ import "fmt"
 3.array 表示要排序的数组
 */
 //快速排序
-func QuickSort(left int, right int, array []int) {
+func QuickSort(left int, right int, array [8000000]int) {
 	l := left
 	r := right
 	//pivot中轴
@@ -57,8 +61,15 @@ func QuickSort(left int, right int, array []int) {
 }
 
 func main() {
-	arr := []int{-9, 78, 0, 23, -567, 70, 123, 90, -23}
-	fmt.Println(arr)
+	//arr := []int{-9, 78, 0, 23, -567, 70, 123, 90, -23}
+	var arr [8000000]int
+	for i := 0; i < 80000; i++ {
+		arr[i] = rand.Intn(80000)
+	}
+	//fmt.Println(arr)
+	start := time.Now().UnixMilli()
 	QuickSort(0, 8, arr)
-	fmt.Println(arr)
+	end := time.Now().UnixMilli()
+	//fmt.Println(arr)
+	fmt.Println("运行的时间 =", end-start)
 }
